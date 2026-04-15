@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retero Settings</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page">
+    <main class="settings-layout">
+      <header class="hero">
+        <p class="eyebrow">Retero</p>
+        <h1>下载与命名设置</h1>
+        <p class="muted">
+          配置保存位置、目录模板和文件名模板，让论文下载结果保持统一结构。
+        </p>
+      </header>
+
+      <section class="card form-grid">
+        <label>
+          <span>保存模式</span>
+          <select id="save-mode-select">
+            <option value="filesystem">本地目录（推荐）</option>
+            <option value="downloads">浏览器下载目录</option>
+          </select>
+        </label>
+
+        <label class="checkbox-row">
+          <input id="downloads-fallback" type="checkbox" />
+          <span>本地目录不可用时，允许回退到浏览器下载目录</span>
+        </label>
+
+        <div class="folder-row">
+          <div>
+            <p class="field-label">当前目录</p>
+            <p id="folder-status" class="muted">尚未选择目录</p>
+          </div>
+          <div class="button-row">
+            <button id="pick-folder" class="primary-button" type="button">选择目录</button>
+            <button id="clear-folder" class="ghost-button" type="button">清除目录</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card form-grid">
+        <label>
+          <span>子目录模板</span>
+          <input id="subdirectory-template" type="text" />
+        </label>
+
+        <label>
+          <span>文件名模板</span>
+          <input id="filename-template" type="text" />
+        </label>
+
+        <div>
+          <p class="field-label">可用变量</p>
+          <p id="token-list" class="token-list"></p>
+        </div>
+
+        <div>
+          <p class="field-label">示例预览</p>
+          <pre id="template-preview" class="path-preview"></pre>
+        </div>
+      </section>
+
+      <section class="card">
+        <p id="settings-status" class="status status-info">修改后会自动保存。</p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/options.js"></script>
+  </body>
+</html>
+

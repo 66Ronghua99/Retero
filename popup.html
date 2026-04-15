@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retero</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page page-popup">
+    <main class="panel">
+      <header class="panel-header">
+        <div>
+          <p class="eyebrow">Retero</p>
+          <h1>保存当前论文</h1>
+        </div>
+        <button id="open-options" class="ghost-button" type="button">设置</button>
+      </header>
+
+      <section class="card">
+        <p id="status" class="status status-info">正在读取当前页面信息…</p>
+        <p id="save-mode" class="muted"></p>
+      </section>
+
+      <form id="paper-form" class="card form-grid">
+        <label>
+          <span>标题</span>
+          <input id="title" name="title" type="text" autocomplete="off" />
+        </label>
+
+        <label>
+          <span>年份</span>
+          <input id="year" name="year" type="text" inputmode="numeric" />
+        </label>
+
+        <label>
+          <span>日期</span>
+          <input id="date" name="date" type="text" placeholder="YYYY-MM-DD" />
+        </label>
+
+        <label>
+          <span>会议 / 期刊</span>
+          <input id="conference" name="conference" type="text" autocomplete="off" />
+        </label>
+
+        <label>
+          <span>作者</span>
+          <input id="authors" name="authors" type="text" autocomplete="off" placeholder="使用逗号分隔" />
+        </label>
+
+        <label>
+          <span>PDF URL</span>
+          <input id="pdf-url" name="pdfUrl" type="url" />
+        </label>
+      </form>
+
+      <section class="card">
+        <p class="field-label">目标路径预览</p>
+        <pre id="path-preview" class="path-preview">等待页面分析…</pre>
+      </section>
+
+      <footer class="actions">
+        <button id="save-paper" class="primary-button" type="button">保存 PDF</button>
+      </footer>
+    </main>
+
+    <script type="module" src="./src/popup.js"></script>
+  </body>
+</html>
+

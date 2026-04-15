@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Retero",
+  "description": "Download papers with normalized filenames into an Obsidian-friendly library.",
+  "version": "0.1.0",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_title": "Retero",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
+

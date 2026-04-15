@@ -1,0 +1,4 @@
+# Harness local verification artifacts
+superpowers/artifacts/refactor-gate/
+.playwright-mcp/
+node_modules/
