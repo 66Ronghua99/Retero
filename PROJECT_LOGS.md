@@ -9,3 +9,4 @@
 - Verified the pure logic with `npm test` and ran syntax checks on the key browser entrypoints. Evidence recorded in `artifacts/verification/2026-04-14-mvp-verification.md`.
 - Root-caused a real-world metadata failure on arXiv to the user opening the extension from a PDF page, where the DOM only exposes the PDF itself and not the paper metadata tags. Fixed it by enriching `/pdf/<id>` pages from the matching `/abs/<id>` page and added a regression test.
 - Root-caused a second failure mode to Chrome's PDF viewer rejecting script injection entirely. Fixed it by adding tab-level fallback inspection that synthesizes a snapshot from the tab URL/title when injection fails, then reuses the same metadata enrichment path.
+- Initialized the directory as a git repository, rewrote the README for public GitHub readers with Obsidian-oriented positioning and setup instructions, and published the project to `https://github.com/66Ronghua99/Retero`.

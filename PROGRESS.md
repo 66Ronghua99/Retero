@@ -8,6 +8,7 @@ M1: Deliver the first working paper-downloader browser extension MVP.
 
 - Repository bootstrapped with the governance-only Harness skeleton
 - First feature direction frozen: Chromium paper-downloader extension for PDF capture and normalized naming
+- Local git repository initialized and published to GitHub
 
 ## In Progress
 
